@@ -22,8 +22,8 @@ def csvWrite(data, path):
 		writer.writerow(data)
 
 # Setup the csv
-csvWrite(['Persons', 'Depth-first','Depth-cross-time', 'Breadth-first', 'Breadth-cross-time', 'A*', 'A*-cross-time'], "perf.csv")
-for i in range(2,7):
+csvWrite(['Problem-size', 'DFS-runtime','DFS-cross-time', 'BFS-runtime', 'BFS-cross-time', 'A*-runtime', 'A*-cross-time'], "perf.csv")
+for i in range(2,11):
 	# i represents number of persons in problem
 	# Create the beginning state
 	startState = makeState(i)
