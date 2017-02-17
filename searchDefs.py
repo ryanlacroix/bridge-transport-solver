@@ -26,8 +26,7 @@ def treeSearchDepth(startState):
 			# This is a solution
 			print("FOUND A SOLUTION.")
 			currStack = getSolutionList(currNode)
-			printSolution(currStack)
-			return True
+			return printSolution(currStack)
 			# return will go somewhere in here
 		else:
 			# Put children of node into fringe
@@ -51,8 +50,7 @@ def treeSearchBreadth(startState):
 			# This is a solution
 			print("FOUND A SOLUTION.")
 			currStack = getSolutionList(currNode)
-			printSolution(currStack)
-			return True
+			return printSolution(currStack)
 		else:
 			# Put children of node into fringe
 			if checkIfVisited(currNode, visitedNodes) == True:
@@ -79,8 +77,7 @@ def treeSearchAStar(startState):
 		currNode = openNodes.pop(getBestNode(openNodes))
 
 		if checkComplete(currNode) == True:
-			printSolution(getSolutionList(currNode))
-			return True
+			return printSolution(getSolutionList(currNode))
 		# Generate successors
 		successors = []
 		expand(currNode, successors)

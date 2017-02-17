@@ -111,6 +111,7 @@ def expand(node, fringe):
 		fringe.append(children[i])
 
 # Prettily print the solution. Fixes hideous output from before
+# Returns time for logging purposes
 def printSolution(solStack):
 	totalTime = 0
 	solStack.reverse()
@@ -121,6 +122,7 @@ def printSolution(solStack):
 		print("") # go to next line
 		totalTime += int(solStack[i].time)
 	print("TOTAL TIME: ", totalTime)
+	return totalTime
 
 # Check if a node has already been visited
 def checkIfVisited(node, visitedNodes):
